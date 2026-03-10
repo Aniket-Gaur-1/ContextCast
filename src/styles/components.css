@@ -1,0 +1,86 @@
+/* ══════════════════════════════════════════════
+   components.css — Buttons · Spinner · Print
+   ══════════════════════════════════════════════ */
+
+/* ── Buttons — Apple style ── */
+.btn-primary {
+  padding: 7px 16px;
+  background: var(--accent);
+  color: #ffffff;
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  border-radius: var(--r-sm);
+  transition: background 0.15s, opacity 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.btn-primary:hover { background: var(--accent-hover); }
+.btn-primary:disabled { opacity: 0.38; cursor: not-allowed; }
+
+.btn-secondary {
+  padding: 7px 16px;
+  background: var(--surface2);
+  color: var(--ink2);
+  border: 1px solid var(--border);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  border-radius: var(--r-sm);
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.btn-secondary:hover { background: var(--surface3); border-color: var(--border2); color: var(--ink); }
+
+.btn-danger {
+  padding: 7px 16px;
+  background: transparent;
+  color: var(--danger);
+  border: 1px solid rgba(255,59,48,0.3);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  border-radius: var(--r-sm);
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.btn-danger:hover { background: rgba(255,59,48,0.06); border-color: rgba(255,59,48,0.5); }
+
+/* ── Spinner ── */
+.spinner {
+  width: 12px;
+  height: 12px;
+  border: 1.5px solid rgba(255,255,255,0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.65s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* ── Print ── */
+@media print {
+  .nav,
+  .sidebar,
+  .detail-toolbar,
+  .sidebar-overlay { display: none !important; }
+
+  .layout { display: block !important; }
+  .main-panel { overflow: visible !important; height: auto !important; }
+  .detail { padding: 16px !important; max-width: 100% !important; }
+  body { background: #fff !important; color: #000 !important; }
+  .summary-box, .list-card, .transcript-box { border: 1px solid #ddd !important; }
+}

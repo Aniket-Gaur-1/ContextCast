@@ -211,8 +211,8 @@ useEffect(() => {
       {tab === "insights" && <Insights meetings={meetings} />}
 
       {/* MODALS */}
-      {showAdd && <AddMeetingModal onSave={addMeeting} onClose={() => setShowAdd(false)} />}
-      {editTarget && <AddMeetingModal existing={editTarget} onSave={updateMeeting} onClose={() => setEditTarget(null)} />}
+      {showAdd && <AddMeetingModal onAdd={addMeeting} onClose={() => setShowAdd(false)} />}
+      {editTarget && <AddMeetingModal existing={editTarget} onAdd={updateMeeting} onClose={() => setEditTarget(null)} />}
       {deleteTarget && <ConfirmDelete meeting={deleteTarget} onConfirm={deleteMeeting} onCancel={() => setDeleteTarget(null)} />}
       {shareTarget && <ShareModal meeting={shareTarget} onClose={() => setShareTarget(null)} />}
     </div>
