@@ -320,11 +320,12 @@ body.dark .nav {
 
 .meeting-item.active { background: var(--ink); }
 .meeting-item.active .meet-title,
-.meeting-item.active .meet-summary { color: rgba(245, 242, 236, 0.92); }
+.meeting-item.active .meet-summary { color: var(--bg); }
 .meeting-item.active .meet-meta,
 .meeting-item.active .meet-platform,
 .meeting-item.active .meet-tag {
-  color: rgba(245, 242, 236, 0.4);
+  color: var(--bg);
+  opacity: 0.5;
   border-color: rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
 }
